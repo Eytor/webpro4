@@ -10,7 +10,7 @@ const Pizza = ({ pizza }) => {
             </div>
             <div className="pizza-name">{name}</div>
             <div className="pizza-description">{description}</div>
-            <div className="pizza-price">{price}</div>
+            <div className="pizza-price">{price} kr.</div>
         </div>
     );
 };
