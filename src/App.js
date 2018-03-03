@@ -7,13 +7,19 @@ import reducers from './reducers/reducers';
 import Menu from './components/Menu/Menu';
 import MenuItem from './components/Menu/MenuItem';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import NavigationBar from './components/NavigationBar/NavigationBar';
 
 const App = () => {
     return (
-        <Switch>
-            <Route exact path="/" component={Menu} />
-            <Route path="/:pizzaId" component={MenuItem} />
-        </Switch>
+        <div>
+            <NavigationBar logoImageUrl='http://icons.iconarchive.com/icons/icons8/ios7/256/Food-Pizza-icon.png' />
+            <div className="container">
+                <Switch>
+                    <Route exact path="/" component={Menu} />
+                    <Route path="/:pizzaId" component={MenuItem} />
+                </Switch>
+            </div>
+        </div>
     );
 };
 
