@@ -8,17 +8,18 @@ import Menu from './components/Menu/Menu';
 import MenuItem from './components/Menu/MenuItem';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import NavigationBar from './components/NavigationBar/NavigationBar';
+import About from './components/About/About';
 
 const App = () => {
     return (
         <div>
             <NavigationBar logoImageUrl='http://icons.iconarchive.com/icons/icons8/ios7/256/Food-Pizza-icon.png' />
-            <div className="container">
-                <Switch>
-                    <Route exact path="/" component={Menu} />
-                    <Route path="/:pizzaId" component={MenuItem} />
-                </Switch>
-            </div>
+
+            <Switch>
+                <Route exact path="/" component={Menu} />
+                <Route path="/about" component={About} />
+                <Route path="/:pizzaId" component={MenuItem} />
+            </Switch>
         </div>
     );
 };
