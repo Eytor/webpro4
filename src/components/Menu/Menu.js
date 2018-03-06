@@ -9,18 +9,18 @@ class Menu extends React.Component {
         getAllPizzas();
     }
     render() {
-        const { pizza } = this.props;
-        console.log(pizza)
+        const { pizzas } = this.props;
+        console.log(pizzas)
         return (
             <div className="container">
-                {pizza.map(p => <Pizza key={p.id} pizza={p} />)}
+                {pizzas.map(p => <Pizza key={p.id} pizza={p} />)}
             </div>
         );
     }
 };
 
-const mapStateToProps = ({ pizza }) => {
-    return { pizza }
+const mapStateToProps = ({ pizzas }) => {
+    return { pizzas }
 }
 
 export default connect(mapStateToProps, { getAllPizzas })(Menu);

@@ -1,16 +1,16 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import Offers from '../Offers/Offers';
-import { getOffers } from '../../actions/pizzaActions';
+import { getOffers } from '../../actions/offerActions';
 
 class MenuOffers extends React.Component {
-    componentDidMount() {
-        const { getOffers } = this.props;
-        getOffers();
-    }
+  componentDidMount() {
+      const { getOffers } = this.props;
+      getOffers();
+  }
   render() {
       const { offer } = this.props;
-      console.log(offer);
+      console.log(offer)
       return (
           <div className="container">
               {offer.map(o => <Offers key={o.id} theOffer={o} />)}
@@ -20,7 +20,7 @@ class MenuOffers extends React.Component {
 };
 
 const mapStateToProps = ({ offer }) => {
-    return { offer }
+  return { offer }
 }
 
 export default connect(mapStateToProps, { getOffers })(MenuOffers);
