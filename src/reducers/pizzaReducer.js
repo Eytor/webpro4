@@ -1,4 +1,4 @@
-import { GET_ALL_PIZZAS, GET_ONE_PIZZA } from '../constants/pizzaConstants';
+import { GET_ALL_PIZZAS, GET_ONE_PIZZA, GET_OFFERS } from '../constants/pizzaConstants';
 
 const pizzaReducer = (state = [], action) => {
     switch (action.type) {
@@ -9,6 +9,9 @@ const pizzaReducer = (state = [], action) => {
             return action.payload;
             break;
         default: return state;
+        case GET_OFFERS:
+          return action.payload;
+          break;
 
     }
 };
