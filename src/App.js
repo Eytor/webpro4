@@ -9,7 +9,7 @@ import MenuItem from './components/Menu/MenuItem';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import NavigationBar from './components/NavigationBar/NavigationBar';
 import About from './components/About/About';
-import Offers from './components/Offers/Offers';
+import MenuOffers from './components/Menu/MenuOffers';
 
 const App = () => {
     return (
@@ -19,7 +19,7 @@ const App = () => {
             <Switch>
                 <Route exact path="/" component={Menu} />
                 <Route path="/about" component={About} />
-                <Route path="/offers" component={Offers} />
+                <Route path="/offers" component={MenuOffers} />
                 <Route path="/:pizzaId" component={MenuItem} />
             </Switch>
         </div>

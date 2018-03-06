@@ -10,8 +10,8 @@ export const getOnePizza = (id) => {
 };
 
 export const getOffers = () => {
-  return dispatch => fetch('http://localhost:3500/api/offers').then(json => json.json()).then(data => dispatch(getOffersSuccess(data)))
-}
+    return dispatch => fetch('http://localhost:3500/api/offers/').then(json => json.json()).then(data => dispatch(getOffersSuccess(data)))
+};
 
 const getAllPizzaSuccess = (pizzas) => {
     return {

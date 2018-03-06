@@ -8,11 +8,10 @@ const pizzaReducer = (state = [], action) => {
         case GET_ONE_PIZZA:
             return action.payload;
             break;
-        default: return state;
         case GET_OFFERS:
           return action.payload;
           break;
-
+        default: return state;
     }
 };
 

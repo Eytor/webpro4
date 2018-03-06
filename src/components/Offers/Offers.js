@@ -1,12 +1,11 @@
 import React from 'react';
 import { PropTypes } from 'prop-types';
-//import { Link } from 'react-router-dom';
 
-const Offers = ({ offer }) => {
-    const {offers, price, validity } = offer;
+const Offers = ({ theOffer }) => {
+    const { offer, price, validity } = theOffer;
     return (
         <div className="offer-wrapper">
-            <div className="offer-description">{offers}</div>
+            <div className="offer-description">{offer}</div>
             <div className="offer-price">{price}</div>
             <div className="offer-validity">{validity}</div>
         </div>
