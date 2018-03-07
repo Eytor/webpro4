@@ -1,6 +1,6 @@
 import React from 'react'
 
-class DeliveryForm extends React.Component {
+class PickUpForm extends React.Component {
 
     constructor() {
         super(props);
@@ -25,3 +25,5 @@ class DeliveryForm extends React.Component {
 
 
 }
+
+export default PickUpForm;

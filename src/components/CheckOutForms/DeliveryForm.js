@@ -28,3 +28,5 @@ class DeliveryForm extends React.Component {
 
 
 }
+
+export default DeliveryForm;

@@ -5,9 +5,9 @@ const Delivery = () => {
     return (
         <div className="delivery-container">
             <h3>Veldu Afhendingarmáta.</h3>
-            <Link to="/" className="deliver-button">Sækja</Link>
+            <Link to="/piform" className="deliver-button">Sækja</Link>
             <h3>eða</h3>
-            <Link to="/" className="deliver-button">Senda</Link>
+            <Link to="/delform" className="deliver-button">Senda</Link>
         </div>
     );
 };
