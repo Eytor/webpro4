@@ -10,6 +10,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import NavigationBar from './components/NavigationBar/NavigationBar';
 import About from './components/About/About';
 import MenuOffers from './components/Menu/MenuOffers';
+import cart from './components/Menu/MenuCart';
 
 const App = () => {
     return (
@@ -18,6 +19,7 @@ const App = () => {
 
             <Switch>
                 <Route exact path="/" component={Menu} />
+                <Route path="/cart" component={cart} />
                 <Route path="/about" component={About} />
                 <Route path="/offers" component={MenuOffers} />
                 <Route path="/:pizzaId" component={MenuItem} />
