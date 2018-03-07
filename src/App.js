@@ -11,6 +11,7 @@ import NavigationBar from './components/NavigationBar/NavigationBar';
 import About from './components/About/About';
 import MenuOffers from './components/Menu/MenuOffers';
 import cart from './components/Menu/MenuCart';
+import Delivery from './components/Delivery/Delivery';
 
 const App = () => {
     return (
@@ -22,6 +23,7 @@ const App = () => {
                 <Route path="/cart" component={cart} />
                 <Route path="/about" component={About} />
                 <Route path="/offers" component={MenuOffers} />
+                <Route path="/delivery" component={Delivery} />
                 <Route path="/:pizzaId" component={MenuItem} />
             </Switch>
         </div>

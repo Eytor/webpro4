@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import Cart from '../Cart/Cart';
+import { Link } from 'react-router-dom';
 
 
 class MenuCart extends React.Component {
@@ -10,6 +11,7 @@ class MenuCart extends React.Component {
         return (
             <div className="container">
                 {theCart.map(p => <Cart key={p.id} cart={p} />)}
+                <Link to='/delivery' className="checkout-button">Checkout</Link>
             </div>
         );
     }

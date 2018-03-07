@@ -5,10 +5,8 @@ const pizzaReducer = (state = {}, action) => {
         case GET_ONE_PIZZA:
             return  action.payload;
             break;
-        default: return state;
-    }
+            default: return state;
+        }
 };
-
-
 
 export default pizzaReducer;
