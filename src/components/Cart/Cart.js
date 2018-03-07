@@ -2,7 +2,7 @@ import React from 'react';
 import {PropTypes} from 'prop-types'
 import { Link } from 'react-router-dom';
 
-const Cart = (cart) => {
+const Cart = ({ cart }) => {
     const { id, name, description, price, image } = cart;
     return (
         <div className="pizza-wrapper">

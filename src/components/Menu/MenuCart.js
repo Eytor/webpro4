@@ -4,8 +4,6 @@ import Cart from '../Cart/Cart';
 
 
 class MenuCart extends React.Component {
-
-
     render() {
         const { theCart} = this.props;
         console.log(theCart)
@@ -19,8 +17,8 @@ class MenuCart extends React.Component {
 
 const mapStateToProps = (state) => {
     return {
-         theCart: state.update.arr
-     }
+        theCart: state.update.arr
+    }
 }
 
 export default connect(mapStateToProps, null)(MenuCart);

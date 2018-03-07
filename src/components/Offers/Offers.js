@@ -5,7 +5,7 @@ const Offers = ({ theOffer }) => {
     const { offer, price, validity } = theOffer;
     return (
         <div className="offer-wrapper">
-            <div className="offer-description">{offer}</div>
+            <h2 className="offer-description">{offer}</h2>
             <div className="offer-price">{price}</div>
             <div className="offer-validity">{validity}</div>
         </div>

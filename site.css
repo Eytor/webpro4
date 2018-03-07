@@ -59,3 +59,10 @@
 .button-wrapper {
     size: 100px;
 }
+
+.offer-wrapper {
+    box-shadow: 5px 5px 20px rgba(155, 155, 155, .5);
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px;
+}
