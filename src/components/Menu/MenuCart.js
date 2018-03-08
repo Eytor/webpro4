@@ -7,7 +7,8 @@ import { Link } from 'react-router-dom';
 class MenuCart extends React.Component {
     render() {
         const { theCart} = this.props;
-        console.log(theCart)
+        var pizzaOrder =
+        console.log(pizzaOrder);
         return (
             <div className="container">
                 {theCart.map(p => <Cart key={p.id} cart={p} />)}
@@ -18,6 +19,11 @@ class MenuCart extends React.Component {
 };
 
 const mapStateToProps = (state) => {
+    if (state.update.arr.length == 0) {
+        state.update.arr = JSON.parse(localStorage.getItem('pizzaOrder'));
+    }
+    localStorage.setItem('pizzaOrder',JSON.stringify(state.update.arr));
+
     return {
         theCart: state.update.arr
     }

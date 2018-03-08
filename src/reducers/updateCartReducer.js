@@ -5,12 +5,13 @@ const initialUserState = {
 }
 
 const updateCartReducer = (state = initialUserState, action) => {
+
     switch (action.type) {
         case UPDATE_CART:
             console.log(action.payload);
             return {
                 ...state,
-                arr:[...state.arr, action.payload]
+                arr:[...state.arr, action.payload],
             }
             break;
         default: return state
