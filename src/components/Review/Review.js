@@ -17,7 +17,7 @@ class Review extends React.Component {
             		return <li key={ index }> <div className="review-pizza-name">{theCart.name}</div> <div className="review-pizza-price">{theCart.price} kr.</div></li>;
           		}) }</ul>
                 <h3 className="price">{price} kr.</h3>
-                <Link to='/' className="checkout-button">Confirm</Link>
+                <Link to='/confirmed' className="checkout-button">Confirm</Link>
             </div>
         );
     }

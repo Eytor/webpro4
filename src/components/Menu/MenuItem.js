@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import Pizza from '../Pizza/Pizza';
 import { getOnePizza } from '../../actions/pizzaActions';
-import {updateCart} from '../../actions/updateActions';
+import { updateCart } from '../../actions/updateActions';
 
 class MenuItem extends React.Component {
 

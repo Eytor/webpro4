@@ -1,6 +1,8 @@
 import React from 'react';
 import {Form,  Button } from 'react-bootstrap';
 import TextInput from '../TextInput/TextInput';
+import toastr from 'toastr';
+import { Redirect } from 'react-router-dom';
 
 const initialstate = {
     fields: {
@@ -9,11 +11,14 @@ const initialstate = {
     }
 }
 
+var redirect = false;
 class PickUpForm extends React.Component {
+
     constructor(props) {
         super(props);
-            this.state = initialstate;
-        }
+        this.state = initialstate;
+        redirect = false;
+    }
 
     onInputChange(e) {
         let fields = Object.assign({}, this.state.fields);
@@ -29,13 +34,17 @@ class PickUpForm extends React.Component {
         console.log(this.state.fields);
         this.setState(initialstate);
         toastr.success('success');
+        redirect = true;
     }
 
     render () {
         const {fullName, address} = this.state.fields;
+        if (redirect) {
+            return <Redirect to='/review'/>;
+        }
         return (
             <div className="container">
-                <Form action="" method="get" onSubmit={e => this.onFormSubmit(e)}>
+                <Form method="get" onSubmit={e => this.onFormSubmit(e)} action="/review" >
                     <TextInput
                         onChange={e => this.onInputChange(e)}
                         name="fullName"
