@@ -1,6 +1,7 @@
 import React from 'react';
 import {Form,  Button } from 'react-bootstrap';
 import TextInput from '../TextInput/TextInput';
+import toastr from 'toastr';
 
 const initialstate = {
     fields: {
@@ -32,7 +33,7 @@ class PickUpForm extends React.Component {
     }
 
     render () {
-        const {fullName, address} = this.state.fields;
+        const {fullName, telephone} = this.state.fields;
         return (
             <div className="container">
                 <Form action="" method="get" onSubmit={e => this.onFormSubmit(e)}>
@@ -44,9 +45,9 @@ class PickUpForm extends React.Component {
                     />
                      <TextInput
                          onChange={e => this.onInputChange(e)}
-                         name="address"
-                         value={address}
-                         validate={val => !val ? 'Address is required': ''}
+                         name="telephone"
+                         value={telephone}
+                         validate={val => !val ? 'Telephone is required': ''}
                      />
                     <Button bsStyle="primary" type="submit" >submit</Button>
                 </Form>

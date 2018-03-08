@@ -36,7 +36,7 @@ class DeliveryForm extends React.Component {
     }
 
     render () {
-        const {fullName, telephone, address} = this.state.fields;
+        const {fullName, telephone, address, postCode, city} = this.state.fields;
         return (
             <div className="container">
                 <Form action="" method="get" onSubmit={e => this.onFormSubmit(e)}>
@@ -57,6 +57,18 @@ class DeliveryForm extends React.Component {
                          name="address"
                          value={address}
                          validate={val => !val ? 'Address is required': ''}
+                     />
+                     <TextInput
+                         onChange={e => this.onInputChange(e)}
+                         name="postCode"
+                         value={postCode}
+                         validate={val => !val ? 'Post code is required': ''}
+                     />
+                     <TextInput
+                         onChange={e => this.onInputChange(e)}
+                         name="city"
+                         value={city}
+                         validate={val => !val ? 'city is required': ''}
                      />
                     <Button bsStyle="primary" type="submit" >submit</Button>
                 </Form>
