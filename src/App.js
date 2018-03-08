@@ -14,6 +14,7 @@ import cart from './components/Menu/MenuCart';
 import Delivery from './components/Delivery/Delivery';
 import DeliveryFrom from './components/CheckOutForms/DeliveryForm';
 import PickUpForm from './components/CheckOutForms//PickUpForm';
+import Review from './components/Review/Review'
 
 const App = () => {
     return (
@@ -28,6 +29,7 @@ const App = () => {
                 <Route path="/delivery" component={Delivery} />
                 <Route path="/delform" component={DeliveryFrom} />
                 <Route path="/piform" component={PickUpForm} />
+                <Route path="/review" component={Review} />
                 <Route path="/:pizzaId" component={MenuItem} />
             </Switch>
         </div>

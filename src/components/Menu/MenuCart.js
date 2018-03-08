@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 
 class MenuCart extends React.Component {
     render() {
-        const { theCart} = this.props;
+        const { theCart } = this.props;
         console.log(theCart)
         return (
             <div className="container">
