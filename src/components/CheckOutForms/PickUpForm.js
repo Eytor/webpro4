@@ -41,14 +41,10 @@ class PickUpForm extends React.Component {
     }
 
     render () {
-<<<<<<< HEAD
-        const {fullName, telephone} = this.state.fields;
-=======
         const {fullName, address} = this.state.fields;
         if (redirect) {
             return <Redirect to='/review'/>;
         }
->>>>>>> 2ad45bf5d76c3820da6d8efc91b6852ad4420cce
         return (
             <div className="container">
                 <Form method="get" onSubmit={e => this.onFormSubmit(e)} action="/review" >

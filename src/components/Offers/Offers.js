@@ -14,7 +14,9 @@ const Offers = ({ theOffer }) => {
 };
 
 Offers.propTypes = {
+    /* the shape of Object Cart*/
     offer: PropTypes.shape({
+        /* An HTML class which can be applied to the element */
         offer: PropTypes.string,
         price: PropTypes.number,
         validFor: PropTypes.string

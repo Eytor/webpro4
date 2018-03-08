@@ -17,7 +17,9 @@ const Pizza = ({ pizza }) => {
 };
 
 Pizza.propTypes = {
+    /* the shape of Object Cart*/
     pizza: PropTypes.shape({
+        /* An HTML class which can be applied to the element */
         name: PropTypes.string,
         description: PropTypes.string,
         price: PropTypes.number,

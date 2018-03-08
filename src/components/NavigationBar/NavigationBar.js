@@ -21,6 +21,7 @@ const NavigationBar = ({ logoImageUrl }) => {
 
 
 NavigationBar.propTypes = {
+    /* An HTML class which can be applied to the element and is required */
     logoImageUrl: PropTypes.string.isRequired
 };
 export default NavigationBar;

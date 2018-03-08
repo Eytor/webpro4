@@ -14,11 +14,12 @@ const TextInput = ({ onChange, name, value, type, validate }) => {
 };
 
 TextInput.propTypes = {
+    /* when this component is used it has a function that is required */
     onChange: PropTypes.func.isRequired,
+    /* Elements that are required for the form registration*/
     name: PropTypes.string.isRequired,
     value: PropTypes.string.isRequired,
     type: PropTypes.string,
-    validate: PropTypes.func
 
 };
 
