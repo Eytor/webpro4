@@ -7,7 +7,7 @@ import { Redirect } from 'react-router-dom';
 const initialstate = {
     fields: {
         fullName: '',
-        address: '',
+        telephone: '',
     }
 }
 
@@ -29,8 +29,8 @@ class PickUpForm extends React.Component {
     onFormSubmit(e) {
         e.preventDefault();
         console.log('ert herna');
-        const {fullName, address} = this.state.fields;
-        if (fullName === '' || address === '') { return false; }
+        const {fullName, telephone} = this.state.fields;
+        if (fullName === '' || telephone === '') { return false; }
         console.log(this.state.fields);
         this.setState(initialstate);
         toastr.success('success');
@@ -38,7 +38,7 @@ class PickUpForm extends React.Component {
     }
 
     render () {
-        const {fullName, address} = this.state.fields;
+        const {fullName, telephone} = this.state.fields;
         if (redirect) {
             return <Redirect to='/review'/>;
         }
@@ -53,9 +53,9 @@ class PickUpForm extends React.Component {
                     />
                      <TextInput
                          onChange={e => this.onInputChange(e)}
-                         name="address"
-                         value={address}
-                         validate={val => !val ? 'Address is required': ''}
+                         name="telephone"
+                         value={telephone}
+                         validate={val => !val ? 'Telephone is required': ''}
                      />
                     <Button bsStyle="primary" type="submit" >submit</Button>
                 </Form>
