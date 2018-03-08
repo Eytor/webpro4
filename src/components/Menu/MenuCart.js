@@ -6,9 +6,8 @@ import { Link } from 'react-router-dom';
 
 class MenuCart extends React.Component {
     render() {
-        const { theCart} = this.props;
-        var pizzaOrder =
-        console.log(pizzaOrder);
+        const { theCart } = this.props;
+        console.log(theCart)
         return (
             <div className="container">
                 {theCart.map(p => <Cart key={p.id} cart={p} />)}
