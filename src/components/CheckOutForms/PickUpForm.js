@@ -2,15 +2,12 @@ import React from 'react';
 import {Form,  Button } from 'react-bootstrap';
 import TextInput from '../TextInput/TextInput';
 import toastr from 'toastr';
-<<<<<<< HEAD
-=======
 import { Redirect } from 'react-router-dom';
->>>>>>> 2ad45bf5d76c3820da6d8efc91b6852ad4420cce
 
 const initialstate = {
     fields: {
         fullName: '',
-        address: '',
+        telephone: '',
     }
 }
 
@@ -32,8 +29,8 @@ class PickUpForm extends React.Component {
     onFormSubmit(e) {
         e.preventDefault();
         console.log('ert herna');
-        const {fullName, address} = this.state.fields;
-        if (fullName === '' || address === '') { return false; }
+        const {fullName, telephone} = this.state.fields;
+        if (fullName === '' || telephone === '') { return false; }
         console.log(this.state.fields);
         this.setState(initialstate);
         toastr.success('success');
@@ -41,7 +38,7 @@ class PickUpForm extends React.Component {
     }
 
     render () {
-        const {fullName, address} = this.state.fields;
+        const {fullName, telephone} = this.state.fields;
         if (redirect) {
             return <Redirect to='/review'/>;
         }
